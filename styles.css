@@ -45,12 +45,16 @@ body {
 }
 
 .site-logo{
+  display: inline-block;
+  line-height: 1;
+  color: var(--accent-2);
+  width: 28px;
+  height: 28px;
   font-variation-settings: 'FILL' 0, 'wght' 600;
   font-size: 1.6rem;
-  color: var(--accent-2);
-  line-height: 1;
-  display: inline-block;
 }
+
+.site-logo img{ width: 100%; height: 100%; display: block; }
 
 .top-actions button{
   background: transparent;
@@ -183,7 +187,7 @@ body {
 
 #customFlags{ background: rgba(255,255,255,0.02); color: var(--text); border: 1px solid rgba(255,255,255,0.03); padding: 8px; border-radius: 6px; width: 100%; }
 
-button#copyBtn{ margin-top: 8px; background: linear-gradient(90deg,var(--accent),var(--accent-2)); color: #052225; padding: 10px 12px; border-radius: 8px; border: none; cursor: pointer; font-weight:700; }
+button#copyBtn{ margin-top: 8px; background: linear-gradient(90deg,#40c9ff,#e81cff); color: #052225; padding: 10px 12px; border-radius: 8px; border: none; cursor: pointer; font-weight:700; }
 
 @media (max-width: 900px){ .container{ width: calc(100% - 32px); padding: 16px; } .flagItem input[type='text']{ width: 160px; } }
 
