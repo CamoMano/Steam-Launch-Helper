@@ -1,0 +1,358 @@
+{
+  "Window and Display": [
+    {
+      "flag": "-fullscreen",
+      "type": "boolean",
+      "label": "Fullscreen Mode",
+      "description": "Forces the game to launch in fullscreen."
+    },
+    {
+      "flag": "-windowed",
+      "type": "boolean",
+      "label": "Windowed Mode (-windowed)",
+      "description": "Forces the game into a windowed state."
+    },
+    {
+      "flag": "-sw",
+      "type": "boolean",
+      "label": "Windowed Mode (-sw)",
+      "description": "Alias for -windowed. Forces the engine to start in windowed mode."
+    },
+    {
+      "flag": "-borderless",
+      "type": "boolean",
+      "label": "Borderless Window",
+      "description": "Forces a borderless window mode."
+    },
+    {
+      "flag": "-noborder",
+      "type": "boolean",
+      "label": "Remove Window Border",
+      "description": "Removes window borders if windowed mode is used."
+    },
+    {
+      "flag": "-16bpp",
+      "type": "boolean",
+      "label": "16-bit Color (GoldSource only)",
+      "description": "Forces 16-bit color mode (GoldSource engines only)."
+    },
+    {
+      "flag": "-32bpp",
+      "type": "boolean",
+      "label": "32-bit Color (GoldSource only)",
+      "description": "Forces 32-bit color mode (GoldSource engines only)."
+    },
+    {
+      "flag": "-w",
+      "type": "number",
+      "label": "Window Width",
+      "description": "Sets a custom width for the window."
+    },
+    {
+      "flag": "-h",
+      "type": "number",
+      "label": "Window Height",
+      "description": "Sets a custom height for the window."
+    },
+    {
+      "flag": "-refresh",
+      "type": "number",
+      "label": "Refresh Rate",
+      "description": "Sets a specific refresh rate."
+    },
+    {
+      "flag": "-novid",
+      "type": "boolean",
+      "label": "Disable Intro Videos (-novid)",
+      "description": "Skips opening video sequences."
+    },
+    {
+      "flag": "-novideo",
+      "type": "boolean",
+      "label": "Disable Intro Videos (-novideo)",
+      "description": "Alias for -novid. Skips opening video sequences."
+    }
+  ],
+
+  "Performance": [
+    {
+      "flag": "-high",
+      "type": "boolean",
+      "label": "High Priority",
+      "description": "Launches the game in high CPU priority mode."
+    },
+    {
+      "flag": "-threads",
+      "type": "number",
+      "label": "Set Thread Count",
+      "description": "Overrides the detected thread count."
+    },
+    {
+      "flag": "-nojoy",
+      "type": "boolean",
+      "label": "Disable Joystick",
+      "description": "Disables joystick support for increased performance."
+    },
+    {
+      "flag": "-heapsize",
+      "type": "number",
+      "label": "Heap Size (KB)",
+      "description": "Specifies the heapsize (in kilobytes) the game will use."
+    }
+  ],
+
+  "Rendering API": [
+    {
+      "flag": "-gl",
+      "type": "boolean",
+      "label": "Use OpenGL",
+      "description": "Forces OpenGL renderer."
+    },
+    {
+      "flag": "-vulkan",
+      "type": "boolean",
+      "label": "Use Vulkan",
+      "description": "Forces Vulkan renderer."
+    },
+    {
+      "flag": "-dx11",
+      "type": "boolean",
+      "label": "Use DirectX 11",
+      "description": "Forces DirectX 11 renderer."
+    },
+    {
+      "flag": "-dx12",
+      "type": "boolean",
+      "label": "Use DirectX 12",
+      "description": "Forces DirectX 12 renderer."
+    },
+    {
+      "flag": "-dxlevel",
+      "type": "number",
+      "label": "Force DirectX Level",
+      "description": "Forces a specific DirectX version (example values: 80, 81, 90, 95, 98). Warning: DirectX 7 (70) is unsupported and may cause crashes."
+    }
+  ],
+
+  "Proton & DXVK": [
+    {
+      "flag": "DXVK_HUD",
+      "type": "text",
+      "label": "DXVK HUD",
+      "description": "Enable DXVK HUD overlay (example: \"fps,memory,version,api\"). Set as an environment variable before %command%: DXVK_HUD=\"fps,memory\"."
+    },
+    {
+      "flag": "DXVK_LOG_LEVEL",
+      "type": "text",
+      "label": "DXVK Log Level",
+      "description": "Set DXVK logging level (none, error, warn, info, debug) or numeric value. Example: DXVK_LOG_LEVEL=info"
+    },
+    {
+      "flag": "DXVK_CONFIG_FILE",
+      "type": "text",
+      "label": "DXVK Config File",
+      "description": "Point to a DXVK config file. Example: DXVK_CONFIG_FILE=/path/to/dxvk.conf"
+    },
+    {
+      "flag": "DXVK_FRAME_RATE",
+      "type": "number",
+      "label": "DXVK Frame Rate",
+      "description": "Limit the frame rate via DXVK. Example: DXVK_FRAME_RATE=60"
+    },
+    {
+      "flag": "DXVK_ASYNC",
+      "type": "boolean",
+      "label": "DXVK Async",
+      "description": "Enable asynchronous command submission (may improve performance on some GPUs). Example: DXVK_ASYNC=1"
+    },
+    {
+      "flag": "DXVK_ASYNC_FLIP",
+      "type": "boolean",
+      "label": "DXVK Async Flip",
+      "description": "Enable async flip optimization. Example: DXVK_ASYNC_FLIP=1"
+    },
+    {
+      "flag": "DXVK_STATE_CACHE",
+      "type": "boolean",
+      "label": "DXVK State Cache",
+      "description": "Enable DXVK state cache to speed up shader/state creation. Example: DXVK_STATE_CACHE=1"
+    },
+    {
+      "flag": "DXVK_FILTER_DEVICE_NAMES",
+      "type": "text",
+      "label": "DXVK Filter Device Names",
+      "description": "Filter which GPUs DXVK will use by name (comma-separated). Example: DXVK_FILTER_DEVICE_NAMES=\"NVIDIA\""
+    },
+    {
+      "flag": "DXVK_FILTER_DEVICE_VENDOR_IDS",
+      "type": "text",
+      "label": "DXVK Filter Device Vendor IDs",
+      "description": "Filter GPUs by vendor ID (comma-separated). Example: DXVK_FILTER_DEVICE_VENDOR_IDS=0x10de"
+    },
+    {
+      "flag": "DXVK_FILTER_DEVICE_IDS",
+      "type": "text",
+      "label": "DXVK Filter Device IDs",
+      "description": "Filter GPUs by device ID (comma-separated). Example: DXVK_FILTER_DEVICE_IDS=0x1c82"
+    },
+    {
+      "flag": "VKD3D_CONFIG_FILE",
+      "type": "text",
+      "label": "VKD3D Config File",
+      "description": "Point to a VKD3D config file. Example: VKD3D_CONFIG_FILE=/path/to/vkd3d.conf"
+    },
+    {
+      "flag": "VKD3D_LOG_LEVEL",
+      "type": "text",
+      "label": "VKD3D Log Level",
+      "description": "Set VKD3D logging level (none, error, warn, info, debug). Example: VKD3D_LOG_LEVEL=info"
+    },
+    {
+      "flag": "PROTON_DLSS_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON DLSS Upgrade",
+      "description": "Automatically upgrade DLSS to the latest version (set to 1). Example: PROTON_DLSS_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_DLSS_INDICATOR",
+      "type": "boolean",
+      "label": "PROTON DLSS Indicator",
+      "description": "Show DLSS status indicator in-game (set to 1). Example: PROTON_DLSS_INDICATOR=1"
+    },
+    {
+      "flag": "PROTON_NVIDIA_LIBS",
+      "type": "boolean",
+      "label": "PROTON NVIDIA Libs",
+      "description": "Enable Nvidia libraries (PhysX, CUDA) when needed. Example: PROTON_NVIDIA_LIBS=1"
+    },
+    {
+      "flag": "PROTON_FSR4_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON FSR4 Upgrade",
+      "description": "Automatically upgrade FSR4 to the latest version (set to 1). Example: PROTON_FSR4_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_FSR4_RDNA3_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON FSR4 RDNA3 Upgrade",
+      "description": "Use RDNA3-optimized FSR4 DLL (set to 1). Example: PROTON_FSR4_RDNA3_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_XESS_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON XeSS Upgrade",
+      "description": "Automatically upgrade XeSS to the latest version (set to 1). Example: PROTON_XESS_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_LOG",
+      "type": "text",
+      "label": "PROTON Log",
+      "description": "Enable Proton logging. Example: PROTON_LOG=1"
+    },
+    {
+      "flag": "PROTON_ENABLE_HDR",
+      "type": "boolean",
+      "label": "PROTON Enable HDR",
+      "description": "Enable HDR support in Proton-based runtimes. Example: PROTON_ENABLE_HDR=1"
+    },
+    {
+      "flag": "__GL_SHADER_DISK_CACHE_SKIP_CLEANUP",
+      "type": "boolean",
+      "label": "Skip GL Shader Disk Cache Cleanup",
+      "description": "Prevent automatic cleanup of GL shader disk cache. Example: __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1"
+    },
+    {
+      "flag": "__GL_SHADER_DISK_CACHE_SIZE",
+      "type": "number",
+      "label": "GL Shader Disk Cache Size",
+      "description": "Increase the maximum shader cache size (bytes). Example: __GL_SHADER_DISK_CACHE_SIZE=12000000000"
+    },
+    {
+      "flag": "LD_PRELOAD",
+      "type": "text",
+      "label": "LD_PRELOAD",
+      "description": "Set LD_PRELOAD to change preload libraries (example: LD_PRELOAD=\"\" to disable Steam overlay)."
+    },
+    {
+      "flag": "PROTON_DXVK_D3D8",
+      "type": "boolean",
+      "label": "Enable DXVK D3D8 Support",
+      "description": "Enable DXVK D3D8 runtime support in Proton (set to 1). Example: PROTON_DXVK_D3D8=1"
+    }
+  ],
+
+  "Networking": [
+    {
+      "flag": "-tcp",
+      "type": "boolean",
+      "label": "Force TCP",
+      "description": "Uses the TCP protocol instead of UDP."
+    }
+  ],
+
+  "Debug and Console": [
+    {
+      "flag": "-console",
+      "type": "boolean",
+      "label": "Enable Console",
+      "description": "Opens the developer console on launch."
+    },
+    {
+      "flag": "-condebug",
+      "type": "boolean",
+      "label": "Console Logging",
+      "description": "Logs all console output into the console.log text file."
+    },
+    {
+      "flag": "-dev",
+      "type": "boolean",
+      "label": "Developer Mode",
+      "description": "Enables developer mode: disables menu background maps and skips quit dialog on exit."
+    },
+    {
+      "flag": "-toconsole",
+      "type": "boolean",
+      "label": "Start in Console",
+      "description": "Starts the engine directly in the console unless a map is specified with +map."
+    },
+    {
+      "flag": "+exec",
+      "type": "text",
+      "label": "Execute Config File",
+      "description": "Executes a config file, example: autoexec.cfg"
+    }
+  ],
+
+  "Misc": [
+    {
+      "flag": "-nopreload",
+      "type": "boolean",
+      "label": "Disable Preload",
+      "description": "Prevents the engine from preloading resources."
+    },
+    {
+      "flag": "-autoconfig",
+      "type": "boolean",
+      "label": "Autoconfig",
+      "description": "Restores video and performance settings to defaults for the detected hardware and ignores .cfg files until removed."
+    },
+    {
+      "flag": "-nocrashdialog",
+      "type": "boolean",
+      "label": "Suppress Crash Dialogs",
+      "description": "Suppresses native crash dialogs for unhandled memory errors."
+    },
+    {
+      "flag": "-lv",
+      "type": "boolean",
+      "label": "Low Violence (Left 4 Dead)",
+      "description": "Enables low violence options in Left 4 Dead."
+    },
+    {
+      "flag": "-sillygibs",
+      "type": "boolean",
+      "label": "Low Violence (Team Fortress 2)",
+      "description": "Enables low violence (silly gibs) for Team Fortress 2."
+    }
+  ]
+}
