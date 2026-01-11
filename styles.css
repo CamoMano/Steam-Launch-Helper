@@ -179,6 +179,26 @@ body {
 /* visually hidden helper for live regions */
 .visually-hidden{ position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
 
+/* visible status used for copy feedback */
+.copy-status{
+  display:inline-block;
+  margin-left: 12px;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  color: var(--accent);
+  font-weight:600;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+.copy-status.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+.copy-status.error{ color: #ff8b8b; }
+
 @media (max-width: 900px){ .container{ width: calc(100% - 32px); padding: 16px; } .flagItem input[type='text']{ width: 160px; } .flagItem{ flex-direction: column; align-items: flex-start; } .flag-right{ width:100%; } .flag-right input{ width:100%; }}
 
 #output{ width: 100%; height: 140px; background: #071124; color: var(--text); border-radius: 8px; padding: 12px; border: 1px solid rgba(255,255,255,0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace; }

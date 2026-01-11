@@ -153,6 +153,18 @@ document.getElementById("customFlags").addEventListener("input", updateOutput);
 
 const liveStatus = document.getElementById('liveStatus');
 
+function showStatusMessage(msg, isError = false) {
+  if (!liveStatus) return;
+  liveStatus.textContent = msg;
+  liveStatus.classList.add('show');
+  liveStatus.classList.toggle('error', !!isError);
+  if (liveStatus._timeout) clearTimeout(liveStatus._timeout);
+  liveStatus._timeout = setTimeout(() => {
+    liveStatus.classList.remove('show', 'error');
+    liveStatus.textContent = '';
+  }, 1500);
+}
+
 document.getElementById("copyBtn").addEventListener("click", async () => {
   const text = document.getElementById("output").value.trim();
   try {
@@ -163,9 +175,9 @@ document.getElementById("copyBtn").addEventListener("click", async () => {
       ta.select();
       document.execCommand('copy');
     }
-    if (liveStatus) { liveStatus.textContent = 'Copied to clipboard'; setTimeout(()=> liveStatus.textContent = '', 1500); }
+    showStatusMessage('Copied to clipboard');
   } catch (e) {
-    if (liveStatus) { liveStatus.textContent = 'Copy failed'; setTimeout(()=> liveStatus.textContent = '', 1500); }
+    showStatusMessage('Copy failed', true);
   }
 });
 

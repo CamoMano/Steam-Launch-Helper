@@ -1,140 +1,6 @@
 {
-  "Window and Display": [
-    {
-      "flag": "-fullscreen",
-      "type": "boolean",
-      "label": "Fullscreen Mode",
-      "description": "Forces the game to launch in fullscreen."
-    },
-    {
-      "flag": "-windowed",
-      "type": "boolean",
-      "label": "Windowed Mode (-windowed)",
-      "description": "Forces the game into a windowed state."
-    },
-    {
-      "flag": "-sw",
-      "type": "boolean",
-      "label": "Windowed Mode (-sw)",
-      "description": "Alias for -windowed. Forces the engine to start in windowed mode."
-    },
-    {
-      "flag": "-borderless",
-      "type": "boolean",
-      "label": "Borderless Window",
-      "description": "Forces a borderless window mode."
-    },
-    {
-      "flag": "-noborder",
-      "type": "boolean",
-      "label": "Remove Window Border",
-      "description": "Removes window borders if windowed mode is used."
-    },
-    {
-      "flag": "-16bpp",
-      "type": "boolean",
-      "label": "16-bit Color (GoldSource only)",
-      "description": "Forces 16-bit color mode (GoldSource engines only)."
-    },
-    {
-      "flag": "-32bpp",
-      "type": "boolean",
-      "label": "32-bit Color (GoldSource only)",
-      "description": "Forces 32-bit color mode (GoldSource engines only)."
-    },
-    {
-      "flag": "-w",
-      "type": "number",
-      "label": "Window Width",
-      "description": "Sets a custom width for the window."
-    },
-    {
-      "flag": "-h",
-      "type": "number",
-      "label": "Window Height",
-      "description": "Sets a custom height for the window."
-    },
-    {
-      "flag": "-refresh",
-      "type": "number",
-      "label": "Refresh Rate",
-      "description": "Sets a specific refresh rate."
-    },
-    {
-      "flag": "-novid",
-      "type": "boolean",
-      "label": "Disable Intro Videos (-novid)",
-      "description": "Skips opening video sequences."
-    },
-    {
-      "flag": "-novideo",
-      "type": "boolean",
-      "label": "Disable Intro Videos (-novideo)",
-      "description": "Alias for -novid. Skips opening video sequences."
-    }
-  ],
 
-  "Performance": [
-    {
-      "flag": "-high",
-      "type": "boolean",
-      "label": "High Priority",
-      "description": "Launches the game in high CPU priority mode."
-    },
-    {
-      "flag": "-threads",
-      "type": "number",
-      "label": "Set Thread Count",
-      "description": "Overrides the detected thread count."
-    },
-    {
-      "flag": "-nojoy",
-      "type": "boolean",
-      "label": "Disable Joystick",
-      "description": "Disables joystick support for increased performance."
-    },
-    {
-      "flag": "-heapsize",
-      "type": "number",
-      "label": "Heap Size (KB)",
-      "description": "Specifies the heapsize (in kilobytes) the game will use."
-    }
-  ],
-
-  "Rendering API": [
-    {
-      "flag": "-gl",
-      "type": "boolean",
-      "label": "Use OpenGL",
-      "description": "Forces OpenGL renderer."
-    },
-    {
-      "flag": "-vulkan",
-      "type": "boolean",
-      "label": "Use Vulkan",
-      "description": "Forces Vulkan renderer."
-    },
-    {
-      "flag": "-dx11",
-      "type": "boolean",
-      "label": "Use DirectX 11",
-      "description": "Forces DirectX 11 renderer."
-    },
-    {
-      "flag": "-dx12",
-      "type": "boolean",
-      "label": "Use DirectX 12",
-      "description": "Forces DirectX 12 renderer."
-    },
-    {
-      "flag": "-dxlevel",
-      "type": "number",
-      "label": "Force DirectX Level",
-      "description": "Forces a specific DirectX version (example values: 80, 81, 90, 95, 98). Warning: DirectX 7 (70) is unsupported and may cause crashes."
-    }
-  ],
-
-  "Proton & DXVK": [
+"Proton & DXVK": [
     {
       "flag": "DXVK_HUD",
       "type": "text",
@@ -278,6 +144,141 @@
       "type": "boolean",
       "label": "Enable DXVK D3D8 Support",
       "description": "Enable DXVK D3D8 runtime support in Proton (set to 1). Example: PROTON_DXVK_D3D8=1"
+    }
+  ],
+
+  "Window and Display": [
+    {
+      "flag": "-fullscreen",
+      "type": "boolean",
+      "label": "Fullscreen Mode",
+      "description": "Forces the game to launch in fullscreen."
+    },
+    {
+      "flag": "-windowed",
+      "type": "boolean",
+      "label": "Windowed Mode (-windowed)",
+      "description": "Forces the game into a windowed state."
+    },
+    {
+      "flag": "-sw",
+      "type": "boolean",
+      "label": "Windowed Mode (-sw)",
+      "description": "Alias for -windowed. Forces the engine to start in windowed mode."
+    },
+    {
+      "flag": "-borderless",
+      "type": "boolean",
+      "label": "Borderless Window",
+      "description": "Forces a borderless window mode."
+    },
+    {
+      "flag": "-noborder",
+      "type": "boolean",
+      "label": "Remove Window Border",
+      "description": "Removes window borders if windowed mode is used."
+    },
+    {
+      "flag": "-16bpp",
+      "type": "boolean",
+      "label": "16-bit Color (GoldSource only)",
+      "description": "Forces 16-bit color mode (GoldSource engines only)."
+    },
+    {
+      "flag": "-32bpp",
+      "type": "boolean",
+      "label": "32-bit Color (GoldSource only)",
+      "description": "Forces 32-bit color mode (GoldSource engines only)."
+    },
+    {
+      "flag": "-w",
+      "type": "number",
+      "label": "Window Width",
+      "description": "Sets a custom width for the window."
+    },
+    {
+      "flag": "-h",
+      "type": "number",
+      "label": "Window Height",
+      "description": "Sets a custom height for the window."
+    },
+    {
+      "flag": "-refresh",
+      "type": "number",
+      "label": "Refresh Rate",
+      "description": "Sets a specific refresh rate."
+    },
+    {
+      "flag": "-novid",
+      "type": "boolean",
+      "label": "Disable Intro Videos (-novid)",
+      "description": "Skips opening video sequences."
+    },
+    {
+      "flag": "-novideo",
+      "type": "boolean",
+      "label": "Disable Intro Videos (-novideo)",
+      "description": "Alias for -novid. Skips opening video sequences."
+    }
+  ],
+
+  "Performance": [
+    {
+      "flag": "-high",
+      "type": "boolean",
+      "label": "High Priority",
+      "description": "Launches the game in high CPU priority mode."
+    },
+    {
+      "flag": "-threads",
+      "type": "number",
+      "label": "Set Thread Count",
+      "description": "Overrides the detected thread count."
+    },
+    {
+      "flag": "-nojoy",
+      "type": "boolean",
+      "label": "Disable Joystick",
+      "description": "Disables joystick support for increased performance."
+    },
+    {
+      "flag": "-heapsize",
+      "type": "number",
+      "label": "Heap Size (KB)",
+      "description": "Specifies the heapsize (in kilobytes) the game will use."
+    }
+  ],
+
+  "Rendering API": [
+    {
+      "flag": "-gl",
+      "type": "boolean",
+      "label": "Use OpenGL",
+      "description": "Forces OpenGL renderer."
+    },
+    {
+      "flag": "-vulkan",
+      "type": "boolean",
+      "label": "Use Vulkan",
+      "description": "Forces Vulkan renderer."
+    },
+    {
+      "flag": "-dx11",
+      "type": "boolean",
+      "label": "Use DirectX 11",
+      "description": "Forces DirectX 11 renderer."
+    },
+    {
+      "flag": "-dx12",
+      "type": "boolean",
+      "label": "Use DirectX 12",
+      "description": "Forces DirectX 12 renderer."
+    },
+    {
+      "flag": "-dxlevel",
+      "type": "number",
+      "label": "Force DirectX Level",
+      "description": "Forces a specific DirectX version (example values: 80, 81, 90, 95, 98). Warning: DirectX 7 (70) is unsupported and may cause crashes."
     }
   ],
 

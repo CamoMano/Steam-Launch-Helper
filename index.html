@@ -29,9 +29,8 @@
 
   <h2>Final Launch Options</h2>
   <textarea id="output" readonly></textarea>
-  <p class="helpText">Tip: DXVK/Proton entries are environment variables and will be formatted as <code>VAR=value</code> (e.g. <code>DXVK_HUD="fps,memory"</code>) and placed before <code>%command%</code>. The tool will automatically include <code>%command%</code> only when a DXVK/Proton environment variable is used.</p>
   <button id="copyBtn" type="button" aria-label="Copy launch options to clipboard">Copy to Clipboard</button>
-  <div id="liveStatus" class="visually-hidden" aria-live="polite"></div>
+  <div id="liveStatus" class="copy-status" aria-live="polite" role="status" aria-atomic="true"></div>
 
   <h2>Custom Flags</h2>
   <input id="customFlags" placeholder="Example: +exec autoexec.cfg">
