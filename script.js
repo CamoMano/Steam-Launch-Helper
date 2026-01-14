@@ -79,8 +79,8 @@ function renderCategories() {
       input.id = id;
       input.setAttribute('aria-label', flagObj.label);
       input.dataset.flag = flagObj.flag;
-      // Mark entries in the Proton, DXVK, VKD3D, & OpenGL, and Proton & DXVK categories as env vars
-      const envCategories = ['Proton', 'DXVK, VKD3D, & OpenGL', 'Proton & DXVK'];
+      // Mark entries in the Proton and DXVK, VKD3D, & OpenGL categories as env vars
+      const envCategories = ['Proton', 'DXVK, VKD3D, & OpenGL'];
       if (envCategories.includes(category)) {
         input.dataset.isEnv = 'true';
       }
