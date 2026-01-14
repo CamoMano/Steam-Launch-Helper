@@ -213,6 +213,7 @@ body {
 
 @media (max-width: 900px){ .container{ width: calc(100% - 32px); padding: 16px; } .flagItem input[type='text']{ width: 160px; } .flagItem{ flex-direction: column; align-items: flex-start; } .flag-right{ width:100%; } .flag-right input{ width:100%; }}
 
+#launchOptionsBox { transition: opacity 0.2s; }
 #output{ width: 100%; height: 140px; background: #071124; color: var(--text); border-radius: 8px; padding: 12px; border: 1px solid rgba(255,255,255,0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace; }
 
 .helpText{ color: var(--muted); }

@@ -79,8 +79,9 @@ function renderCategories() {
       input.id = id;
       input.setAttribute('aria-label', flagObj.label);
       input.dataset.flag = flagObj.flag;
-      // Mark entries in the Proton & DXVK category as env vars
-      if (category === 'Proton & DXVK') {
+      // Mark entries in the Proton and DXVK, VKD3D, & OpenGL categories as env vars
+      const envCategories = ['Proton', 'DXVK, VKD3D, & OpenGL'];
+      if (envCategories.includes(category)) {
         input.dataset.isEnv = 'true';
       }
       input.addEventListener("input", updateOutput);
@@ -101,8 +102,6 @@ function renderCategories() {
     title.setAttribute('aria-expanded', 'false');
   });
 }
-
-
 
 function updateOutput() {
   const inputs = document.querySelectorAll(".flagItem input");
@@ -146,7 +145,18 @@ function updateOutput() {
   const custom = document.getElementById("customFlags").value.trim();
   if (custom.length > 0) parts.push(custom);
 
-  document.getElementById("output").value = parts.join(' ').trim();
+  const outputValue = parts.join(' ').trim();
+  document.getElementById("output").value = outputValue;
+
+  // Show/hide launch options box
+  const launchBox = document.getElementById('launchOptionsBox');
+  if (launchBox) {
+    if (outputValue.length > 0) {
+      launchBox.style.display = '';
+    } else {
+      launchBox.style.display = 'none';
+    }
+  }
 }
 
 document.getElementById("customFlags").addEventListener("input", updateOutput);
