@@ -1,6 +1,63 @@
 {
 
-"Proton & DXVK": [
+"Proton": [
+    {
+      "flag": "PROTON_DLSS_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON DLSS Upgrade",
+      "description": "Automatically upgrade DLSS to the latest version (set to 1). Example: PROTON_DLSS_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_DLSS_INDICATOR",
+      "type": "boolean",
+      "label": "PROTON DLSS Indicator",
+      "description": "Show DLSS status indicator in-game (set to 1). Example: PROTON_DLSS_INDICATOR=1"
+    },
+    {
+      "flag": "PROTON_NVIDIA_LIBS",
+      "type": "boolean",
+      "label": "PROTON NVIDIA Libs",
+      "description": "Enable Nvidia libraries (PhysX, CUDA) when needed. Example: PROTON_NVIDIA_LIBS=1"
+    },
+    {
+      "flag": "PROTON_FSR4_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON FSR4 Upgrade",
+      "description": "Automatically upgrade FSR4 to the latest version (set to 1). Example: PROTON_FSR4_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_FSR4_RDNA3_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON FSR4 RDNA3 Upgrade",
+      "description": "Use RDNA3-optimized FSR4 DLL (set to 1). Example: PROTON_FSR4_RDNA3_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_XESS_UPGRADE",
+      "type": "boolean",
+      "label": "PROTON XeSS Upgrade",
+      "description": "Automatically upgrade XeSS to the latest version (set to 1). Example: PROTON_XESS_UPGRADE=1"
+    },
+    {
+      "flag": "PROTON_LOG",
+      "type": "text",
+      "label": "PROTON Log",
+      "description": "Enable Proton logging. Example: PROTON_LOG=1"
+    },
+    {
+      "flag": "PROTON_ENABLE_HDR",
+      "type": "boolean",
+      "label": "PROTON Enable HDR",
+      "description": "Enable HDR support in Proton-based runtimes. Example: PROTON_ENABLE_HDR=1"
+    },
+    {
+      "flag": "PROTON_DXVK_D3D8",
+      "type": "boolean",
+      "label": "Enable DXVK D3D8 Support",
+      "description": "Enable DXVK D3D8 runtime support in Proton (set to 1). Example: PROTON_DXVK_D3D8=1"
+    }
+  ],
+
+"DXVK, VKD3D, & OpenGL": [
     {
       "flag": "DXVK_HUD",
       "type": "text",
@@ -74,54 +131,6 @@
       "description": "Set VKD3D logging level (none, error, warn, info, debug). Example: VKD3D_LOG_LEVEL=info"
     },
     {
-      "flag": "PROTON_DLSS_UPGRADE",
-      "type": "boolean",
-      "label": "PROTON DLSS Upgrade",
-      "description": "Automatically upgrade DLSS to the latest version (set to 1). Example: PROTON_DLSS_UPGRADE=1"
-    },
-    {
-      "flag": "PROTON_DLSS_INDICATOR",
-      "type": "boolean",
-      "label": "PROTON DLSS Indicator",
-      "description": "Show DLSS status indicator in-game (set to 1). Example: PROTON_DLSS_INDICATOR=1"
-    },
-    {
-      "flag": "PROTON_NVIDIA_LIBS",
-      "type": "boolean",
-      "label": "PROTON NVIDIA Libs",
-      "description": "Enable Nvidia libraries (PhysX, CUDA) when needed. Example: PROTON_NVIDIA_LIBS=1"
-    },
-    {
-      "flag": "PROTON_FSR4_UPGRADE",
-      "type": "boolean",
-      "label": "PROTON FSR4 Upgrade",
-      "description": "Automatically upgrade FSR4 to the latest version (set to 1). Example: PROTON_FSR4_UPGRADE=1"
-    },
-    {
-      "flag": "PROTON_FSR4_RDNA3_UPGRADE",
-      "type": "boolean",
-      "label": "PROTON FSR4 RDNA3 Upgrade",
-      "description": "Use RDNA3-optimized FSR4 DLL (set to 1). Example: PROTON_FSR4_RDNA3_UPGRADE=1"
-    },
-    {
-      "flag": "PROTON_XESS_UPGRADE",
-      "type": "boolean",
-      "label": "PROTON XeSS Upgrade",
-      "description": "Automatically upgrade XeSS to the latest version (set to 1). Example: PROTON_XESS_UPGRADE=1"
-    },
-    {
-      "flag": "PROTON_LOG",
-      "type": "text",
-      "label": "PROTON Log",
-      "description": "Enable Proton logging. Example: PROTON_LOG=1"
-    },
-    {
-      "flag": "PROTON_ENABLE_HDR",
-      "type": "boolean",
-      "label": "PROTON Enable HDR",
-      "description": "Enable HDR support in Proton-based runtimes. Example: PROTON_ENABLE_HDR=1"
-    },
-    {
       "flag": "__GL_SHADER_DISK_CACHE_SKIP_CLEANUP",
       "type": "boolean",
       "label": "Skip GL Shader Disk Cache Cleanup",
@@ -138,12 +147,6 @@
       "type": "text",
       "label": "LD_PRELOAD",
       "description": "Set LD_PRELOAD to change preload libraries (example: LD_PRELOAD=\"\" to disable Steam overlay)."
-    },
-    {
-      "flag": "PROTON_DXVK_D3D8",
-      "type": "boolean",
-      "label": "Enable DXVK D3D8 Support",
-      "description": "Enable DXVK D3D8 runtime support in Proton (set to 1). Example: PROTON_DXVK_D3D8=1"
     }
   ],
 
