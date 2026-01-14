@@ -103,9 +103,6 @@ function renderCategories() {
   });
 }
 
-
-
-
 function updateOutput() {
   const inputs = document.querySelectorAll(".flagItem input");
   let args = [];
