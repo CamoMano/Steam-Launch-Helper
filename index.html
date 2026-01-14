@@ -27,10 +27,13 @@
 
   <div id="categories" class="categories-grid"></div>
 
-  <h2>Final Launch Options</h2>
-  <textarea id="output" readonly></textarea>
-  <button id="copyBtn" type="button" aria-label="Copy launch options to clipboard">Copy to Clipboard</button>
-  <div id="liveStatus" class="copy-status" aria-live="polite" role="status" aria-atomic="true"></div>
+
+  <div id="launchOptionsBox" style="display:none;">
+    <h2>Final Launch Options</h2>
+    <textarea id="output" readonly></textarea>
+    <button id="copyBtn" type="button" aria-label="Copy launch options to clipboard">Copy to Clipboard</button>
+    <div id="liveStatus" class="copy-status" aria-live="polite" role="status" aria-atomic="true"></div>
+  </div>
 
   <h2>Custom Flags</h2>
   <input id="customFlags" placeholder="Example: +exec autoexec.cfg">
